@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calculator"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.095" />
+
+    <EditText
+        android:id="@+id/editTextNumber_Val01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/editTextNumber_Val02"
+        app:layout_constraintStart_toStartOf="@+id/editTextNumber_Val02"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.19999999" />
+
+    <EditText
+        android:id="@+id/editTextNumber_Val02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumber_Val01"
+        app:layout_constraintVertical_bias="0.025" />
+
+    <TextView
+        android:id="@+id/textView_Val01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Num01"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextNumber_Val01"
+        app:layout_constraintEnd_toStartOf="@+id/editTextNumber_Val01"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editTextNumber_Val01" />
+
+    <TextView
+        android:id="@+id/textView_Val02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Num02"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextNumber_Val02"
+        app:layout_constraintEnd_toStartOf="@+id/editTextNumber_Val02"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editTextNumber_Val02" />
+
+    <Button
+        android:id="@+id/button_Division"
+        android:layout_width="88dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:onClick="ButtonDivisionClicked"
+        android:text="/"
+        app:layout_constraintBottom_toBottomOf="@+id/button_Multiply"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/button_Multiply"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/button_Minus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="ButtonMinusClicked"
+        android:text="-"
+        app:layout_constraintBottom_toBottomOf="@+id/button_Plus"
+        app:layout_constraintStart_toEndOf="@+id/button_Plus"
+        app:layout_constraintTop_toTopOf="@+id/button_Plus"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/button_Plus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:onClick="ButtonPlusClicked"
+        android:text="+"
+        app:layout_constraintBottom_toTopOf="@+id/textView_Result"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumber_Val02" />
+
+    <Button
+        android:id="@+id/button_Multiply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="ButtonMultiplyClicked"
+        android:text="x"
+        app:layout_constraintBottom_toBottomOf="@+id/button_Minus"
+        app:layout_constraintEnd_toStartOf="@+id/button_Division"
+        app:layout_constraintTop_toTopOf="@+id/button_Minus"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView_Result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Result"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
